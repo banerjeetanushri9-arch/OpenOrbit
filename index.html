@@ -1,4 +1,4 @@
-<!doctype html>
+<!-- <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -10,4 +10,589 @@
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open Orbit | Grow Through Open Source 🌱</title>
+  <meta name="description" content="Open Orbit helps beginners grow their skills through open-source contributions. Paste a repository and watch your coding journey sprout.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            forest: {
+              DEFAULT: '#166534',
+              light: '#15803d',
+              dark: '#14532d',
+              night: '#06180c',
+            },
+            mint: {
+              DEFAULT: '#86EFAC',
+              light: '#bbf7d0',
+              dark: '#4ade80',
+            },
+            cream: {
+              DEFAULT: '#FEFCE8',
+              light: '#fefefe',
+              dark: '#fef9c3',
+            },
+            earth: {
+              DEFAULT: '#92400E',
+              light: '#b45309',
+              dark: '#78350f',
+            },
+            sky: {
+              DEFAULT: '#38BDF8',
+              light: '#7dd3fc',
+              dark: '#0284c7',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Poppins', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="js/theme.js"></script>
+</head>
+<body class="bg-[#FEFCE8] text-slate-800 dark:bg-forest-night dark:text-emerald-100 transition-colors duration-300 grid-bg-light dark:grid-bg-dark min-h-screen flex flex-col justify-between selection:bg-mint/30 selection:text-forest">
+
+  <!-- Header / Navigation -->
+  <header class="sticky top-0 z-50 w-full glass-panel border-b border-forest/10 dark:border-mint/10 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center space-x-2.5 group">
+        <div class="relative flex items-center justify-center w-10 h-10 rounded-xl bg-forest dark:bg-mint text-cream dark:text-forest shadow-md shadow-forest/10 dark:shadow-mint/10">
+          <i data-lucide="sprout" class="w-5 h-5 animate-leaf-float"></i>
+        </div>
+        <span class="font-display font-bold text-xl tracking-tight text-forest dark:text-mint">Open Orbit</span>
+      </a>
+
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold text-forest/80 dark:text-emerald-350">
+        <a href="#problems" class="hover:text-forest dark:hover:text-mint transition-colors">Weeds</a>
+        <a href="#features" class="hover:text-forest dark:hover:text-mint transition-colors">Features</a>
+        <a href="#how-it-works" class="hover:text-forest dark:hover:text-mint transition-colors">Timeline</a>
+        <a href="#testimonials" class="hover:text-forest dark:hover:text-mint transition-colors">Ecosystem</a>
+      </nav>
+
+      <div class="flex items-center space-x-4">
+        <button class="theme-toggle-btn p-2 rounded-lg hover:bg-forest/5 dark:hover:bg-mint/5 text-forest dark:text-mint transition-colors" aria-label="Toggle Theme">
+          <i data-lucide="sun" class="sun-icon w-5 h-5 hidden"></i>
+          <i data-lucide="moon" class="moon-icon w-5 h-5"></i>
+        </button>
+
+        <a href="dashboard.html" class="hidden sm:inline-flex items-center justify-center px-4 py-2 rounded-xl text-sm font-semibold text-forest border border-forest/20 hover:bg-forest/5 dark:text-mint dark:border-mint/20 dark:hover:bg-mint/5 transition-all">
+          Sign In
+        </a>
+        
+        <a href="dashboard.html" class="inline-flex items-center justify-center px-4 py-2 rounded-xl text-sm font-semibold text-cream bg-forest hover:bg-forest-light dark:bg-mint dark:text-forest dark:hover:bg-mint-dark shadow-md shadow-forest/10 hover:-translate-y-0.5 transition-all">
+          Plant Your First Seed
+          <i data-lucide="arrow-right" class="ml-1.5 w-4 h-4"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    <!-- Hero Section -->
+    <section class="relative pt-12 pb-20 overflow-hidden">
+      <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-mint/10 dark:bg-mint/5 rounded-full blur-[120px] pointer-events-none"></div>
+      <div class="absolute top-1/3 left-1/3 w-[350px] h-[350px] bg-earth/5 dark:bg-earth/2 rounded-full blur-[100px] pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-6 text-center lg:text-left space-y-6">
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-forest/5 border border-forest/10 text-forest dark:bg-mint/5 dark:border-mint/10 dark:text-mint text-xs font-semibold uppercase tracking-wide">
+              <span>Your Contribution Seed 🌱</span>
+            </div>
+            
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold tracking-tight leading-tight text-forest dark:text-cream">
+              Grow Through <br class="hidden sm:inline" />
+              <span class="text-earth dark:text-mint font-extrabold">Open Source</span>
+            </h1>
+            
+            <p class="text-base sm:text-lg text-slate-600 dark:text-emerald-250 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+              Open Orbit transforms confusing GitHub issues into clear, step-by-step guidance so you can confidently make your first contribution. Water your skills, sprout leaves, and watch your contributions branch out.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+              <a href="dashboard.html" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 rounded-xl font-bold text-cream bg-forest hover:bg-forest-light dark:bg-mint dark:text-forest dark:hover:bg-mint-dark shadow-lg shadow-forest/10 hover:-translate-y-0.5 transition-all">
+                Plant Your First Contribution
+                <i data-lucide="sprout" class="ml-2 w-4 h-4 animate-leaf-float"></i>
+              </a>
+              <a href="#how-it-works" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 rounded-xl font-semibold text-forest hover:bg-forest/5 dark:text-mint dark:hover:bg-mint/5 border border-forest/20 dark:border-mint/20 transition-all">
+                See How It Grows
+              </a>
+            </div>
+
+            <div class="pt-6 border-t border-forest/10 dark:border-mint/10 flex items-center justify-center lg:justify-start gap-8 text-xs font-medium text-slate-500 dark:text-emerald-400/80">
+              <div class="flex items-center space-x-1.5">
+                <i data-lucide="flower" class="w-4 h-4 text-emerald-500 animate-pulse"></i>
+                <span>Fresh, welcoming layout</span>
+              </div>
+              <div class="flex items-center space-x-1.5">
+                <i data-lucide="leaf" class="w-4 h-4 text-forest dark:text-mint"></i>
+                <span>Over 1,200 contributors blossomed</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6 relative flex justify-center items-center">
+            <div class="relative w-full max-w-md md:max-w-lg aspect-square flex items-center justify-center bg-forest/5 dark:bg-mint/5 rounded-full border border-dashed border-forest/10 dark:border-mint/10 p-6">
+              
+              <svg id="hero-tree-svg" class="w-full h-full max-h-[380px] drop-shadow-xl" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50 350 H350" stroke="#92400E" stroke-width="6" stroke-linecap="round" />
+                <path d="M80 350 Q200 330 320 350" stroke="#166534" stroke-width="4" fill="#166534" fill-opacity="0.1" />
+                
+                <circle cx="120" cy="365" r="8" fill="#92400E" opacity="0.6" />
+                <path d="M120 365 L115 360" stroke="#FEFCE8" stroke-width="1.5" />
+                <circle cx="280" cy="368" r="8" fill="#92400E" opacity="0.6" />
+                <circle cx="200" cy="360" r="10" fill="#92400E" class="animate-pulse" />
+                <text x="194" y="364" font-family="sans-serif" font-size="10" fill="#FEFCE8" font-weight="bold">🐙</text>
+
+                <path d="M200 350 Q180 375 160 380" stroke="#78350f" stroke-width="2" stroke-dasharray="3 3" />
+                <path d="M200 350 Q220 378 240 385" stroke="#78350f" stroke-width="2" stroke-dasharray="3 3" />
+
+                <path d="M200 350 L200 240" stroke="#92400E" stroke-width="14" stroke-linecap="round" />
+                <path d="M200 290 Q160 270 130 250" stroke="#92400E" stroke-width="8" stroke-linecap="round" />
+                <path d="M200 270 Q240 240 270 230" stroke="#92400E" stroke-width="8" stroke-linecap="round" />
+                <path d="M200 240 Q180 190 160 170" stroke="#92400E" stroke-width="6" stroke-linecap="round" />
+                <path d="M200 240 Q220 200 230 180" stroke="#92400E" stroke-width="6" stroke-linecap="round" />
+
+                <path d="M130 250 C110 230, 90 240, 110 260 C130 280, 140 260, 130 250 Z" fill="#15803d" class="hover-grow cursor-pointer" />
+                <circle cx="110" cy="245" r="8" fill="#38BDF8" class="animate-bounce" />
+                <text x="107" y="248" fill="white" font-size="8" font-weight="bold" font-family="sans-serif">✓</text>
+                
+                <path d="M270 230 C290 210, 310 220, 300 240 C280 260, 260 250, 270 230 Z" fill="#86EFAC" class="hover-grow cursor-pointer" />
+                <circle cx="295" cy="225" r="9" fill="#166534" />
+                <text x="292" y="228" fill="#FEFCE8" font-size="8" font-family="sans-serif">🌱</text>
+
+                <path d="M160 170 C140 150, 150 120, 170 130 C190 140, 180 160, 160 170 Z" fill="#22c55e" class="hover-grow cursor-pointer" />
+                <circle cx="150" cy="145" r="7" fill="#b45309" />
+
+                <path d="M230 180 C220 150, 250 140, 260 165 C270 190, 250 190, 230 180 Z" fill="#166534" class="hover-grow cursor-pointer" />
+                <circle cx="250" cy="155" r="8" fill="#38BDF8" />
+                <text x="247" y="158" fill="white" font-size="8" font-weight="bold" font-family="sans-serif">★</text>
+              </svg>
+              
+              <div class="absolute top-10 left-6 glass-panel px-3 py-1.5 rounded-xl border border-forest/10 text-[10px] font-semibold text-forest flex items-center gap-1 shadow-sm animate-leaf-float">
+                <i data-lucide="git-branch" class="w-3.5 h-3.5 text-earth"></i>
+                <span>Git branch cloned</span>
+              </div>
+
+              <div class="absolute bottom-16 right-4 glass-panel px-3 py-1.5 rounded-xl border border-forest/10 text-[10px] font-semibold text-forest flex items-center gap-1 shadow-sm animate-leaf-float-delayed">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                <span>PR #1 Merged!</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="problems" class="py-20 bg-cream-dark/30 border-y border-forest/5 transition-colors duration-300">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+          <span class="text-xs font-semibold text-earth uppercase tracking-widest block">The Weeds in Your Path</span>
+          <h2 class="text-3xl sm:text-4xl font-display font-bold text-forest dark:text-cream">Weeds That Block Your Growth</h2>
+          <p class="text-slate-600 dark:text-emerald-200/80 text-sm sm:text-base">Every beginner developer meets weeds in the open-source wild. We help clear the path so your roots can grow deep.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="glass-panel p-6 rounded-2xl border border-forest/10 hover-grow text-center flex flex-col justify-between">
+            <div class="w-12 h-12 rounded-full bg-earth/10 text-earth flex items-center justify-center mx-auto mb-5">
+              <i data-lucide="alert-triangle" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <h3 class="font-display font-bold text-base text-forest dark:text-mint mb-2">Overgrown Codebases</h3>
+              <p class="text-xs text-slate-500 dark:text-emerald-300/60 leading-relaxed">
+                Dense folder directories, package files, and config trees feel like a tangled forest. You cannot find the line where you need to make changes.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-forest/5 text-[10px] font-semibold text-earth-light">
+              Weed level: Highly Confusing
+            </div>
+          </div>
+
+          <div class="glass-panel p-6 rounded-2xl border border-forest/10 hover-grow text-center flex flex-col justify-between">
+            <div class="w-12 h-12 rounded-full bg-earth/10 text-earth flex items-center justify-center mx-auto mb-5">
+              <i data-lucide="compass" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <h3 class="font-display font-bold text-base text-forest dark:text-mint mb-2">Thorny Issues</h3>
+              <p class="text-xs text-slate-500 dark:text-emerald-350/65 leading-relaxed">
+                Issues marked "good first issue" are often full of complex developer jargon, outdated code examples, and missing setup explanations.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-forest/5 text-[10px] font-semibold text-earth-light">
+              Weed level: Hard to Decipher
+            </div>
+          </div>
+
+          <div class="glass-panel p-6 rounded-2xl border border-forest/10 hover-grow text-center flex flex-col justify-between">
+            <div class="w-12 h-12 rounded-full bg-earth/10 text-earth flex items-center justify-center mx-auto mb-5">
+              <i data-lucide="wind" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <h3 class="font-display font-bold text-base text-forest dark:text-mint mb-2">Stunted Progress</h3>
+              <p class="text-xs text-slate-500 dark:text-emerald-350/65 leading-relaxed">
+                Fear of making mistakes, breaking files, submitting the wrong git tags, or receiving harsh, confusing feedback from repository maintainers.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-forest/5 text-[10px] font-semibold text-earth-light">
+              Weed level: Mental block
+            </div>
+          </div>
+
+          <div class="glass-panel p-6 rounded-2xl border border-forest/10 hover-grow text-center flex flex-col justify-between">
+            <div class="w-12 h-12 rounded-full bg-earth/10 text-earth flex items-center justify-center mx-auto mb-5">
+              <i data-lucide="sun-dim" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <h3 class="font-display font-bold text-base text-forest dark:text-mint mb-2">Shaded Growth</h3>
+              <p class="text-xs text-slate-500 dark:text-emerald-355/65 leading-relaxed">
+                No active mentoring. You write an inquiry comment on GitHub and wait for weeks, only to get a single-word reply that doesn't clear up anything.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-forest/5 text-[10px] font-semibold text-earth-light">
+              Weed level: Lack of Light
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-16 p-6 rounded-3xl bg-forest/5 border border-forest/10 text-center max-w-4xl mx-auto space-y-4">
+          <h4 class="font-display font-bold text-forest dark:text-mint text-lg flex items-center justify-center">
+            <i data-lucide="sparkles" class="w-5 h-5 mr-2 text-earth animate-pulse"></i>
+            How Open Orbit Clears the Path
+          </h4>
+          <p class="text-xs text-slate-600 dark:text-emerald-350 leading-relaxed">
+            By automatically resolving file structure maps, writing step-by-step checklists, explaining the code environment in beginner-friendly words, and validating branches prior to pull requests, we cut the thistles down so you can blossom.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+        <span class="text-xs font-semibold text-forest dark:text-mint uppercase tracking-widest block">Growth Enablers</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-forest dark:text-cream">Features Built for Natural Growth</h2>
+        <p class="text-slate-600 dark:text-emerald-250/80 text-sm sm:text-base">Our toolbox is designed like a gardener's kit, helping you water your skills and root deeply into active repositories.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-6 gap-8">
+        <div class="md:col-span-3 glass-panel p-8 rounded-3xl border border-forest/10 hover-grow flex flex-col justify-between relative overflow-hidden">
+          <div class="space-y-4 z-10">
+            <div class="w-12 h-12 rounded-xl bg-forest text-cream flex items-center justify-center shadow-sm">
+              <i data-lucide="sprout" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-display font-bold text-xl text-forest dark:text-mint">Repo Simplifier 🌱</h3>
+            <p class="text-sm text-slate-600 dark:text-emerald-300 leading-relaxed">
+              Understand code repositories instantly. Open Orbit filters out compile noise and config scripts, presenting a visual, tree-like roadmap highlighting the main entry files, components, and directories you need to target.
+            </p>
+          </div>
+          <div class="mt-6 flex flex-wrap gap-2 text-[10px] font-semibold text-forest/70 dark:text-mint/70 z-10">
+            <span class="px-2.5 py-1 bg-forest/5 rounded-md">Visual Code Maps</span>
+            <span class="px-2.5 py-1 bg-forest/5 rounded-md">Entry points marked</span>
+          </div>
+        </div>
+
+        <div class="md:col-span-3 glass-panel p-8 rounded-3xl border border-forest/10 hover-grow flex flex-col justify-between relative overflow-hidden">
+          <div class="space-y-4 z-10">
+            <div class="w-12 h-12 rounded-xl bg-forest text-cream flex items-center justify-center shadow-sm">
+              <i data-lucide="languages" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-display font-bold text-xl text-forest dark:text-mint">Issue Translator 🍃</h3>
+            <p class="text-sm text-slate-600 dark:text-emerald-300 leading-relaxed">
+              Tackle vague warnings and cryptic descriptions. Our translator reads the GitHub issue description, processes log failures, and outputs clear, plain-English steps. Ratings suggest the task difficulty relative to your current skill level.
+            </p>
+          </div>
+          <div class="mt-6 flex flex-wrap gap-2 text-[10px] font-semibold text-forest/70 dark:text-mint/70 z-10">
+            <span class="px-2.5 py-1 bg-forest/5 rounded-md">Jargon cleanup</span>
+            <span class="px-2.5 py-1 bg-forest/5 rounded-md">Difficulty badges</span>
+          </div>
+        </div>
+
+        <div class="md:col-span-2 glass-panel p-6 rounded-3xl border border-forest/10 hover-grow flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-10 h-10 rounded-xl bg-forest text-cream flex items-center justify-center">
+              <i data-lucide="check-square" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-display font-bold text-lg text-forest dark:text-mint">Guided Journey 🌿</h3>
+            <p class="text-xs text-slate-500 dark:text-emerald-350/80 leading-relaxed">
+              Follow a clear, interactive contribution path. Tasks are generated as checklists connected to your repository code branches.
+            </p>
+          </div>
+          <div class="mt-6 pt-3 border-t border-forest/5 flex items-center justify-between text-[10px] text-slate-400">
+            <span>Branch verification</span>
+            <i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+          </div>
+        </div>
+
+        <div class="md:col-span-2 glass-panel p-6 rounded-3xl border border-forest/10 hover-grow flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-10 h-10 rounded-xl bg-forest text-cream flex items-center justify-center">
+              <i data-lucide="shield-alert" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-display font-bold text-lg text-forest dark:text-mint">Beginner Safety Net 🌳</h3>
+            <p class="text-xs text-slate-500 dark:text-emerald-350/80 leading-relaxed">
+              Submit code without fear. Open Orbit checks git push configurations, checks testing files, and ensures you won't overwrite critical branches.
+            </p>
+          </div>
+          <div class="mt-6 pt-3 border-t border-forest/5 flex items-center justify-between text-[10px] text-slate-400">
+            <span>Local sanity check</span>
+            <i data-lucide="lock" class="w-4 h-4 text-forest dark:text-mint"></i>
+          </div>
+        </div>
+
+        <div class="md:col-span-2 glass-panel p-6 rounded-3xl border border-forest/10 hover-grow flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-10 h-10 rounded-xl bg-forest text-cream flex items-center justify-center">
+              <i data-lucide="git-pull-request" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-display font-bold text-lg text-forest dark:text-mint">PR Assistant 🍀</h3>
+            <p class="text-xs text-slate-500 dark:text-emerald-350/80 leading-relaxed">
+              Formulate professional, well-described descriptions for your code updates automatically. Includes markdown outputs you can copy straight to GitHub.
+            </p>
+          </div>
+          <div class="mt-6 pt-3 border-t border-forest/5 flex items-center justify-between text-[10px] text-slate-400">
+            <span>Copy-ready formats</span>
+            <i data-lucide="copy" class="w-4 h-4 text-forest dark:text-mint"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-20 bg-cream-dark/30 border-y border-forest/5 transition-colors duration-300">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+          <span class="text-xs font-semibold text-earth uppercase tracking-widest block">The Lifecycle of a Contribution</span>
+          <h2 class="text-3xl sm:text-4xl font-display font-bold text-forest dark:text-cream">From Seed to Apple Tree</h2>
+          <p class="text-slate-600 dark:text-emerald-250/80 text-sm sm:text-base">Watch your skills mature through four clear stages as you contribute to open-source code.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+          <div class="hidden md:block absolute top-[40px] left-[12%] right-[12%] h-[3px] bg-gradient-to-r from-earth/20 via-forest/20 to-mint/30 pointer-events-none"></div>
+
+          <div class="flex flex-col items-center text-center space-y-4 group">
+            <div class="w-16 h-16 rounded-full bg-cream border-2 border-earth text-earth font-display font-extrabold text-2xl flex items-center justify-center relative shadow-sm group-hover:scale-110 transition-transform">
+              🌰
+            </div>
+            <div class="space-y-1">
+              <span class="text-[10px] font-bold text-earth uppercase">1. Seed</span>
+              <h3 class="font-display font-bold text-base text-forest dark:text-mint">Paste Repository</h3>
+              <p class="text-xs text-slate-500 dark:text-emerald-350/70 max-w-[200px] mx-auto">
+                Paste the URL of any GitHub project. We check the environment configurations and file structure maps.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center text-center space-y-4 group">
+            <div class="w-16 h-16 rounded-full bg-cream border-2 border-forest text-forest font-display font-extrabold text-2xl flex items-center justify-center relative shadow-sm group-hover:scale-110 transition-transform">
+              🌱
+            </div>
+            <div class="space-y-1">
+              <span class="text-[10px] font-bold text-forest dark:text-mint uppercase">2. Sprout</span>
+              <h3 class="font-display font-bold text-base text-forest dark:text-mint">Understand Issue</h3>
+              <p class="text-xs text-slate-500 dark:text-emerald-350/70 max-w-[200px] mx-auto">
+                Translate the dense, confusing issue parameters into clean milestones and clear coding objectives.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center text-center space-y-4 group">
+            <div class="w-16 h-16 rounded-full bg-cream border-2 border-forest text-forest font-display font-extrabold text-2xl flex items-center justify-center relative shadow-sm group-hover:scale-110 transition-transform">
+              🌿
+            </div>
+            <div class="space-y-1">
+              <span class="text-[10px] font-bold text-forest dark:text-mint uppercase">3. Plant</span>
+              <h3 class="font-display font-bold text-base text-forest dark:text-mint">Follow Guidance</h3>
+              <p class="text-xs text-slate-500 dark:text-emerald-350/70 max-w-[200px] mx-auto">
+                Water your coding steps. Walk through files following checklists that update your progress tree live.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center text-center space-y-4 group">
+            <div class="w-16 h-16 rounded-full bg-cream border-2 border-forest text-forest font-display font-extrabold text-2xl flex items-center justify-center relative shadow-sm group-hover:scale-110 transition-transform">
+              🌳
+            </div>
+            <div class="space-y-1">
+              <span class="text-[10px] font-bold text-forest dark:text-mint uppercase">4. Tree</span>
+              <h3 class="font-display font-bold text-base text-forest dark:text-mint">Submit Contribution</h3>
+              <p class="text-xs text-slate-500 dark:text-emerald-355/70 max-w-[200px] mx-auto">
+                Formulate descriptions with the PR Assistant, push code, and see your PR merged into the main forest.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+        <span class="text-xs font-semibold text-forest dark:text-mint uppercase tracking-widest block">The Contributor Forest</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-forest dark:text-cream">Growing a Collaborative Forest</h2>
+        <p class="text-slate-600 dark:text-emerald-250/80 text-sm sm:text-base">See how beginner developers sprouted their first code branches and grew their careers through Open Orbit.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="glass-panel p-6 rounded-2xl border border-forest/10 hover-grow flex flex-col justify-between">
+          <div>
+            <div class="flex items-center space-x-1 text-earth-light mb-4">
+              <i data-lucide="flower" class="w-4 h-4 fill-current"></i>
+              <span class="text-[10px] font-bold uppercase tracking-wider">Acorn Contributor</span>
+            </div>
+            <p class="text-slate-600 dark:text-emerald-250 text-xs italic leading-relaxed mb-6">
+              "I felt like a lost seed staring at the massive React folder layout. The Repo Simplifier pruned the directory mapping down to the exact files I needed to adjust. My first PR was merged within a day!"
+            </p>
+          </div>
+          <div class="flex items-center space-x-3 pt-4 border-t border-forest/5">
+            <div class="w-9 h-9 rounded-full bg-forest text-cream font-display font-bold text-xs flex items-center justify-center">TL</div>
+            <div>
+              <h4 class="font-display font-bold text-xs text-forest dark:text-mint">Tanya Lopez</h4>
+              <p class="text-[10px] text-slate-400">Contributed to <span class="text-forest-light dark:text-mint">facebook/react</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-panel p-6 rounded-2xl border border-forest/10 hover-grow flex flex-col justify-between">
+          <div>
+            <div class="flex items-center space-x-1 text-earth-light mb-4">
+              <i data-lucide="flower" class="w-4 h-4 fill-current"></i>
+              <span class="text-[10px] font-bold uppercase tracking-wider">Oak Contributor</span>
+            </div>
+            <p class="text-slate-600 dark:text-emerald-250 text-xs italic leading-relaxed mb-6">
+              "cryptic parameter bugs in link prefetching used to give me major anxiety. The Issue Translator decoded it into simple English bullet points. It felt like playing a motivating game of Duolingo!"
+            </p>
+          </div>
+          <div class="flex items-center space-x-3 pt-4 border-t border-forest/5">
+            <div class="w-9 h-9 rounded-full bg-forest text-cream font-display font-bold text-xs flex items-center justify-center">AR</div>
+            <div>
+              <h4 class="font-display font-bold text-xs text-forest dark:text-mint">Austin Rivers</h4>
+              <p class="text-[10px] text-slate-400">Contributed to <span class="text-forest-light dark:text-mint">vercel/next.js</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-panel p-6 rounded-2xl border border-forest/10 hover-grow flex flex-col justify-between">
+          <div>
+            <div class="flex items-center space-x-1 text-earth-light mb-4">
+              <i data-lucide="flower" class="w-4 h-4 fill-current"></i>
+              <span class="text-[10px] font-bold uppercase tracking-wider">Forest Guardian</span>
+            </div>
+            <p class="text-slate-600 dark:text-emerald-250 text-xs italic leading-relaxed mb-6">
+              "Formatting the pull request was always my least favorite step. The PR Assistant outputted standard templates, categorized my updates, and let me copy everything to clipboard with one click."
+            </p>
+          </div>
+          <div class="flex items-center space-x-3 pt-4 border-t border-forest/5">
+            <div class="w-9 h-9 rounded-full bg-forest text-cream font-display font-bold text-xs flex items-center justify-center">DK</div>
+            <div>
+              <h4 class="font-display font-bold text-xs text-forest dark:text-mint">Dina K.</h4>
+              <p class="text-[10px] text-slate-400">Contributed to <span class="text-forest-light dark:text-mint">tailwind/tailwindcss</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom Grow Banner -->
+    <section class="py-16 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-gradient-to-tr from-forest-dark via-[#103d1f] to-forest-dark text-cream p-8 md:p-12 rounded-3xl border border-mint/20 shadow-2xl relative overflow-hidden text-center space-y-6">
+        <div class="absolute inset-0 grid-bg-dark opacity-10"></div>
+        <div class="absolute -right-20 -bottom-20 w-64 h-64 bg-mint/5 rounded-full blur-3xl"></div>
+        
+        <h2 class="text-3xl md:text-4xl font-display font-bold relative z-10">Ready to plant your first seed?</h2>
+        <p class="text-emerald-200 max-w-xl mx-auto text-xs md:text-sm relative z-10 leading-relaxed">
+          Open Orbit is free, educational, and secure. Step into our garden, select a repository, and let your developer path blossom.
+        </p>
+        
+        <div class="relative z-10 pt-4">
+          <a href="dashboard.html" class="inline-flex items-center justify-center px-8 py-4 rounded-xl font-bold bg-cream text-forest hover:bg-cream-dark transition-all hover:scale-105 shadow-lg shadow-white/5">
+            Open Contributor Dashboard
+            <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-forest dark:bg-forest-night border-t border-mint/10 py-12 text-cream/75 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="space-y-4">
+          <a href="#" class="flex items-center space-x-2">
+            <div class="w-8 h-8 rounded-lg bg-mint text-forest flex items-center justify-center shadow">
+              <i data-lucide="sprout" class="w-4 h-4"></i>
+            </div>
+            <span class="font-display font-bold text-lg text-cream">Open Orbit</span>
+          </a>
+          <p class="text-[11px] text-cream/70 leading-relaxed">
+            Helping developers sprout and grow their skills through guided, step-by-step contributions.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-display font-bold text-xs text-cream uppercase tracking-wider mb-4">Garden Tools</h4>
+          <ul class="space-y-2 text-[11px] text-cream/60">
+            <li><a href="#features" class="hover:text-mint">Repo Simplifier</a></li>
+            <li><a href="dashboard.html" class="hover:text-mint">Dashboard Workspace</a></li>
+            <li><a href="#how-it-works" class="hover:text-mint">Growth Timeline</a></li>
+            <li><a href="#" class="hover:text-mint">Safety Net</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-display font-bold text-xs text-cream uppercase tracking-wider mb-4">Resources</h4>
+          <ul class="space-y-2 text-[11px] text-cream/60">
+            <li><a href="#" class="hover:text-mint">Git Handbook</a></li>
+            <li><a href="#" class="hover:text-mint">Sandbox Guide</a></li>
+            <li><a href="#" class="hover:text-mint">FAQ</a></li>
+            <li><a href="#" class="hover:text-mint">Eco-Dev Network</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-display font-bold text-xs text-cream uppercase tracking-wider mb-4">Water the Garden</h4>
+          <p class="text-[11px] text-cream/60 leading-normal">Subscribe for new repository recommendations.</p>
+          <div class="flex space-x-2">
+            <input type="email" placeholder="coder@garden.com" class="px-3 py-1.5 rounded-lg text-xs bg-forest-dark border border-mint/20 text-cream focus:outline-none focus:border-mint w-full" />
+            <button class="px-3 py-1.5 bg-mint text-forest rounded-lg text-xs font-semibold hover:bg-mint-dark">Join</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 pt-8 border-t border-mint/5 flex flex-col sm:flex-row items-center justify-between text-[11px] text-cream/40">
+        <p>&copy; 2026 Open Orbit. Growing codebases, one leaf at a time. 🌱</p>
+        <div class="flex space-x-4 mt-4 sm:mt-0">
+          <a href="#" class="hover:text-mint">Privacy</a>
+          <a href="#" class="hover:text-mint">Terms</a>
+          <a href="#" class="hover:text-mint flex items-center"><i data-lucide="github" class="w-3.5 h-3.5 mr-1"></i>Open Source</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/landing.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
 </html>
