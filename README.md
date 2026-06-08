@@ -210,11 +210,5 @@ Together, we can make open source easier for everyone.
 
 ---
 
-## 📜 License
-
-MIT License
-
----
-
 ⭐ If you believe open source should be easier for beginners, give Open Orbit a star.
 
